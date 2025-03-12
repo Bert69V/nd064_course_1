@@ -23,7 +23,7 @@ jobs:
         name: Build and push
         uses: docker/build-push-action@v6
         with:
-          context: ./nd064_course_1/project/
-          file: ./nd064_course_1/project/Dockerfile
+          context: ./project
+          file: ./project/Dockerfile
           push: true
-          tags: techtrends:latest
+          tags: Bert69V/nd064_course_1/project/techtrends:latest

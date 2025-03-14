@@ -1,5 +1,6 @@
 import sqlite3
 import logging
+import sys
 from flask import Flask, jsonify, json, render_template, request, url_for, redirect, flash
 from werkzeug.exceptions import abort
 
@@ -101,6 +102,8 @@ def create():
     return render_template('create.html')
 
 if __name__ == "__main__":
-    logging.basicConfig(level=logging.DEBUG, format='%(asctime)s - %(levelname)s - %(message)s',
-                    datefmt='%d/%m/%Y %H:%M:%S')
+    logging.basicConfig(level=logging.DEBUG, format='%(asctime)s - %(levelname)s - %(message)s',datefmt='%d/%m/%Y %H:%M:%S',handlers=[
+                        logging.StreamHandler(sys.stdout),  # For STDOUT
+                        logging.StreamHandler(sys.stderr)   # For STDERR
+                    ])
     app.run(host='0.0.0.0', port='3111')

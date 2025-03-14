@@ -8,7 +8,7 @@ service:
   type: ClusterIP
 
 image:
-  repository: techtrends
+  repository: bert69/techtrends
   tag: latest
   pullPolicy: IfNotPresent
 
@@ -21,7 +21,7 @@ resources:
   limits:
     memory: 128Mi
     cpu: 500m
-    
+
 containerPort: 3111
 livenessProbe:
   httpGet:

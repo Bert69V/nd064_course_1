@@ -12,6 +12,6 @@ spec:
     helm:
       valueFiles:
       - values.yaml
-    path: project/helm
+    path: project/helm/
     repoURL: https://github.com/Bert69V/nd064_course_1
     targetRevision: HEAD

@@ -26,4 +26,4 @@ spec:
         imagePullPolicy: IfNotPresent
         name: techtrends
         resources:
-{{ toYaml .Values.resources | indent 12 }}
+{{ toYaml .Values.resources | indent 6 }}
